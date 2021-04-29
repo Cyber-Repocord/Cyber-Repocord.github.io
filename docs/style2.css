@@ -1,0 +1,48 @@
+.text {
+    font-family: Krona One;
+}
+
+.title {
+    color: lightskyblue;
+}
+
+.navbar {
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    list-style: none;
+    text-align: right;
+    text-decoration: none;
+    font-size: 200%;
+    font-family: Open Sans;
+}
+
+.learnMoreButton {
+    text-align: center; 
+    font-family: Krona One;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+body {
+    background-color: azure;
+}
+
+section {
+    text-align: center;
+}
+
+li {
+    display: block;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
