@@ -1,11 +1,10 @@
 :root {
-    --darkmode: true;
-
     --text-color: white;
     --border-color: white;
     --background-color: #404050;
     --hover-color: #ffffff4d;
     --navbar-background-color: #292930;
+    --footer-background-color: #292930;
 }
 
 * {
@@ -24,7 +23,7 @@ html, body {
     background-color: var(--navbar-background-color);
     font-size: 2rem;
     text-align: center;
-    position: fixed;
+    position: flex;
     top: 0;
     width: 100%;
 }
@@ -52,22 +51,15 @@ html, body {
 }
 
 .content {
-    margin-top: 5rem;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
-}
-
-@media (max-width: 547px) {
-    .content {
-        margin-top: 10rem;
-    }
 }
 
 .copyright {
     font-family: "Open Sans";
     font-size: 1.5rem;
     color: var(--text-color);
-    position: fixed;
-    right: 1%;
-    bottom: 1%;
+    background-color: var(--footer-background-color);
+    text-align: right;
+    padding: 1%;
 }
