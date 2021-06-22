@@ -5,6 +5,7 @@
     --hover-color: #ffffff4d;
     --navbar-background-color: #292930;
     --footer-background-color: #292930;
+    --highlighted-color: #00ffff4d;
 }
 
 * {
@@ -50,12 +51,16 @@ html, body {
     background-color: var(--hover-color);
 }
 
+.highlighted {
+    background-color: var(--highlighted-color);
+}
+
 .content {
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
 }
 
-.copyright {
+.footer {
     font-family: "Open Sans";
     font-size: 1.5rem;
     color: var(--text-color);
