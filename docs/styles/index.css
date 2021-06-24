@@ -1,0 +1,112 @@
+:root {
+    --text-color: white;
+    --border-color: white;
+    --background-color: #404050;
+    --hover-color: #ffffff4d;
+    --navbar-background-color: #292930;
+    --footer-background-color: #292930;
+    --highlighted-color: #00ffff4d;
+
+    --theme: dark;
+    --transition-duration: 0s;
+}
+
+[data-theme="light"] {
+    --text-color: black;
+    --border-color: black;
+    --background-color: beige;
+    --hover-color: aqua;
+    --navbar-background-color: gray;
+    --footer-background-color: gray;
+    --highlighted-color: #00ffff4d;
+
+    --theme: light;
+}
+
+[data-loaded="true"] {
+    --transition-duration: 1s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans";
+    
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: color var(--transition-duration);
+    transition: background-color var(--transition-duration);
+}
+
+.navbar {
+    font-size: 2rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: var(--navbar-background-color);
+    transition: background-color var(--transition-duration);
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.navbar li {
+    display: inline;
+    padding: 0 1%;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5em;
+    background-size: auto;
+
+    color: var(--text-color);
+    transition: color var(--transition-duration);
+}
+
+.navbar a:hover {
+    background-color: var(--hover-color);
+    transition: background-color 0s;
+}
+
+.highlighted {
+    background-color: var(--highlighted-color);
+    transition: background-color var(--transition-duration);
+}
+
+.content {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title-header {
+    font-size: 250%;
+}
+
+.footer {
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding: 1%;
+    
+    color: var(--text-color);
+    background-color: var(--footer-background-color);
+    
+    transition: color var(--transition-duration);
+    transition: background-color var(--transition-duration);
+}
