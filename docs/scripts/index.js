@@ -11,7 +11,14 @@ function onWindowResize() {
 }
 
 function refreshTheme() {
-    let theme = localStorage.getItem("theme");
+    var theme = localStorage.getItem("theme");
+
+    if (theme == null) {
+        theme = getComputedStyle(document.documentElement).getPropertyValue("--client-prefered-theme");
+        document.documentElement.dataset.isthemeset = false;
+    } else {
+        document.documentElement.dataset.isthemeset = true;
+    }
 
     document.documentElement.dataset.theme = theme;
     
@@ -21,8 +28,20 @@ function refreshTheme() {
 }
 
 function switchTheme() {
-    if (localStorage.getItem("theme") == "dark") localStorage.setItem("theme", "light");
+    var theme = localStorage.getItem("theme");
+
+    if (theme == null) {
+        theme = getComputedStyle(document.documentElement).getPropertyValue("--client-prefered-theme");
+    }
+
+    if (theme == "dark") localStorage.setItem("theme", "light");
     else localStorage.setItem("theme", "dark");
+
+    refreshTheme();
+}
+
+function resetTheme() {
+    localStorage.removeItem("theme");
 
     refreshTheme();
 }
