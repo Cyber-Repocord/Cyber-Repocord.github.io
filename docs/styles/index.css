@@ -6,11 +6,22 @@
     --navbar-background-color: #292930;
     --footer-background-color: #292930;
     --highlighted-color: #00ffff4d;
+    
+    --button-text-color: white;
+    --button-background-color: gray;
+    --button-hover-color: #2e2d2d;
+    --secondary-button-text-color: white;
 
     --theme: dark;
     --transition-duration: 0s;
     --client-prefered-theme:dark; /* don't add spaces, will not work */
     --isthemeset: false;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --client-prefered-theme:dark; /* don't add spaces, will not work */
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,30 +33,17 @@
         --text-color: black;
         --border-color: black;
         --background-color: beige;
-        --hover-color: aqua;
+        --hover-color: #c3c3aa;
         --navbar-background-color: gray;
         --footer-background-color: gray;
         --highlighted-color: #00ffff4d;
 
+        --button-text-color: white;
+        --button-background-color: black;
+        --button-hover-color: #2e2d2d;
+        --secondary-button-text-color: white;
+
         --theme: light;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --client-prefered-theme:dark; /* don't add spaces, will not work */
-    }
-
-    [data-isthemeset="false"] {
-        --text-color: white;
-        --border-color: white;
-        --background-color: #404050;
-        --hover-color: #ffffff4d;
-        --navbar-background-color: #292930;
-        --footer-background-color: #292930;
-        --highlighted-color: #00ffff4d;
-
-        --theme: dark;
     }
 }
 
@@ -53,16 +51,22 @@
     --text-color: black;
     --border-color: black;
     --background-color: beige;
-    --hover-color: aqua;
+    --hover-color: #c3c3aa;
     --navbar-background-color: gray;
     --footer-background-color: gray;
     --highlighted-color: #00ffff4d;
+
+    --button-text-color: white;
+    --button-background-color: gray;
+    --button-hover-color: #2e2d2d;
+    --secondary-button-text-color: white;
 
     --theme: light;
 }
 
 [data-loaded="true"] {
     --transition-duration: 1s;
+    --button-transition-duration: 1s;
 }
 
 * {
@@ -114,7 +118,6 @@ html, body {
 
 .navbar a:hover {
     background-color: var(--hover-color);
-    transition: background-color 0s;
 }
 
 .highlighted {
@@ -146,4 +149,19 @@ html, body {
     
     transition: color var(--transition-duration);
     transition: background-color var(--transition-duration);
+}
+
+.button {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1%;
+
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+}
+
+.button:hover {
+    color: var(--secondary-button-text-color);
+    background-color: var(--button-hover-color);
 }
