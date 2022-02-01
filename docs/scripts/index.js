@@ -21,6 +21,8 @@ function refreshTheme() {
     }
 
     document.documentElement.dataset.theme = theme;
+
+    document.getElementById("theme-color").content = theme == "dark" ? "#292930" : "#808080"
     
     setInterval(() => {
         document.documentElement.dataset.loaded = "true";
@@ -51,6 +53,7 @@ window.onresize = function() {
 }
 
 window.onload = function() {
+    document.getElementById("footer").innerHTML = "@" + new Date().getFullYear() + " RepoCord";
     onWindowResize();
     refreshTheme();
 }
