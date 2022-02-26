@@ -106,6 +106,10 @@ html, body {
     padding: 0 1%;
 }
 
+a {
+    color: aqua;
+}
+
 .navbar a {
     display: inline-block;
     text-decoration: none;
